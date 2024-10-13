@@ -152,6 +152,23 @@ body.contact-page {
 .contact-button:hover {
     color: #ff69b4; /* Цвет фона при наведении */
 }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-button {
+        width: 80%;
+        text-align: center;
+    }
+
+    #model-container {
+        width: 100%;
+        height: 50vh;
+    }
+}
 
 body.work-page {
     font-family: Arial, sans-serif;
