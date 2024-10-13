@@ -1,0 +1,284 @@
+/* styles.css */
+body.index {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); /* Замените на ваше изображение */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.custom-button {
+    background-color: transparent;
+    border: 2px solid blue;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    display: inline-block; /* Делаем ссылки блочными элементами */
+    font-family: 'Press Start 2P', cursive;
+}
+
+.custom-button:hover {
+    color: #ff69b4;
+}
+
+#model-container {
+    width: 80vw;
+    height: 80vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color: white;
+    font-size: 16px;
+}
+
+h2 {
+    color: white;
+    font-size: 16px;
+    text-align: center; /* Центрирование текста */
+    margin-top: 50px; /* Отступ сверху */
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    z-index: -500;
+    width: 100%; /* Измените размер контейнера */
+    
+}
+.video-container iframe {
+    width: 100%;
+    height: 600px; /* Измените высоту видео */
+    border-radius: 35px; /* Скруглите углы */
+}
+
+.showreel {
+    width: 60%;
+    border-radius: 30px;
+}
+
+.recent-videos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 5px; /* Отступы между видео */
+}
+
+.recent-videos video {
+    width: 25%; /* Ширина каждого видео */
+    border-radius: 30px;
+}
+
+
+/*contact*/
+
+
+body.contact-page {
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Предотвращает прокрутку */
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/*.profile-picture {
+    width: 700px; 
+    height: auto;
+    margin-right: 50px; 
+} 
+*/
+#model-container2 {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-right: 50px; 
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Press Start 2P';
+    z-index: 7;
+}
+
+.contact-button {
+    font-size: 24px; /* Увеличьте размер шрифта */
+    text-transform: uppercase; /* Большие буквы */
+    margin-bottom: 20px; /* Отступы между кнопками */
+    text-decoration: none;
+    color: #ffffff; /* Цвет текста */
+    background-color: transparent; /* Цвет фона кнопки */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.contact-button:hover {
+    color: #ff69b4; /* Цвет фона при наведении */
+}
+
+body.work-page {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* страница обо мне */
+
+
+body.about-page {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff69b4;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px; /* Adjust for the fixed header */
+}
+
+.about-me {
+    width: 45%;
+    margin-right: 50px;
+}
+
+.about-title {
+    font-size: 36px;
+    color: blue;
+    text-shadow:
+        -1px -1px 0 pink,
+        1px -1px 0 pink,
+        -1px 1px 0 pink,
+        1px 1px 0 pink;
+    padding: 10px;
+    text-align: left;
+}
+
+.about-text, .skills-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin-right: 50px;
+}
+
+.programs {
+    width: 45%;
+    margin-left: 70px;
+}
+.render {
+    width: 15%;
+    margin-left: 100px;
+}
+
+.section-title {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: blue;
+    text-shadow:
+        -1px -1px 0 pink,
+        1px -1px 0 pink,
+        -1px 1px 0 pink,
+        1px 1px 0 pink;
+}
+
+.programs-list, .render-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.programs-list li, .render-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.skills-highlight{
+    color: #ff69b4;
+}
+
+/* страница work*/
+
+
