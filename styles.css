@@ -5,11 +5,14 @@ body.index {
     background-image: url('images/background.jpg'); /* Замените на ваше изображение */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat; /* Убедитесь, что изображение не повторяется */
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh; /* Убедитесь, что элемент занимает всю высоту экрана */
 }
+
 
 .buttons-container {
     display: flex;
