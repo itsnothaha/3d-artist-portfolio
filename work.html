@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body class="work-page">
+    <div id="loading-screen">
+        <div class="loading-message"></div>
+    </div>
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="nav-link">Home</a>
@@ -99,6 +102,37 @@
             </video>
         </div>
     </main>
+    <script>
+        // JavaScript для управления окном загрузки
+        window.addEventListener('load', function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+        });
+
+        // JavaScript для анимации текста
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(function() {
+                        element.innerHTML = '';
+                        i = 0;
+                        type();
+                    }, 1000); // Задержка перед повтором анимации
+                }
+            }
+            type();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var loadingMessage = document.querySelector('.loading-message');
+            typeWriter(loadingMessage, 'Loading...', 70);
+        });
+    </script>
 </body>
 </html>
 
