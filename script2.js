@@ -119,6 +119,12 @@ controls.maxPolarAngle = Math.PI; // Максимальный угол поля�
 function animate() {
     requestAnimationFrame(animate);
     controls.update(); // Обновляем управление
+
+    // Вращение модели вокруг вертикальной оси
+    if (model) {
+        model.rotation.y += 0.01; // Медленное вращение
+    }
+
     renderer.render(scene, camera);
 }
 
@@ -126,8 +132,9 @@ function animate() {
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth * 0.5, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
