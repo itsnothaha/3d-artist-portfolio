@@ -48,6 +48,7 @@ loader.load('model.glb', function(gltf) {
     });
     scene.add(model);
     animate();
+    window.dispatchEvent(new Event('modelLoaded'))
 }, undefined, function(error) {
     console.error(error);
 });

@@ -96,10 +96,11 @@ loader.load('totallyspace.glb', function(gltf) {
         if (child.isMesh) {
             child.castShadow = true; // Включаем тени для мешей
             child.receiveShadow = true; // Включаем тени для мешей
-        }
+        }   
     });
     scene.add(model);
     animate();
+    window.dispatchEvent(new Event('modelLoaded'));
 }, undefined, function(error) {
     console.error(error);
 });
@@ -134,6 +135,7 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
