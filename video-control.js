@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top >= -windowHeight &&
+            rect.bottom <= windowHeight * 2
         );
     }
 
@@ -35,3 +34,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkVideos);
     window.addEventListener('resize', checkVideos);
 });
+
